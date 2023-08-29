@@ -1,0 +1,24 @@
+
+<p id="heading" >Word Utils</p>
+
+<mat-slide-toggle id="mode" (click)="toggleDarkMode()"><p id="dMode">Dark Mode</p></mat-slide-toggle>
+
+
+<textarea placeholder="Enter you Text" [(ngModel)]="textEntered" (ngModelChange)="updatedLength();wordsLength()">
+</textarea>
+<br>
+
+<p class="btn">
+<button id="btn1" (click)="upperCase()">UpperCase</button>
+<button id="btn2" (click)="lowerCase()">LowerCase</button>
+<button id="btn3" (click)="removeSpace()">Remove Extra Space</button>
+<button id="btn4" (click)="clear()">Clear</button></p>
+<p id="length">Length of the text you entered : {{textLength}}</p>
+<p id="length">Number of words: {{wordLength}}</p>
+
+<p id="result">Result:  </p>
+<div id="newArea">
+<p *ngIf="newText">{{newText}}</p>
+<p *ngIf="!newText">{{textEntered}}</p>
+</div>
+
